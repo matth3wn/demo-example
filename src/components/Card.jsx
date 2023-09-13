@@ -8,7 +8,6 @@ export default function ApplicationCard({
   name,
   actionButtonName,
   imgUrl,
-  route,
   description,
   handleActionButtonClick
 }) {

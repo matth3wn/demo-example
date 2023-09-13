@@ -13,6 +13,7 @@ export default function BasicModal({  toggle, handleToggle, data }) {
         aria-describedby="modal-desc"
         open={toggle}
         onClose={() => handleToggle(false)}
+        maxWidth
         sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
       >
         <Sheet
@@ -42,7 +43,7 @@ export default function BasicModal({  toggle, handleToggle, data }) {
             fontWeight="lg"
             mb={1}
           >
-            This is the modal title
+            {Object.keys(data).length ? 'Edit Item' : 'Create New Item'}
           </Typography>
           <InputFormProps data={data}/>
         </Sheet>
